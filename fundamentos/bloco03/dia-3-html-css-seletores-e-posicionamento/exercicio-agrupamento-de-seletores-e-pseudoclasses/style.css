@@ -1,0 +1,17 @@
+h1, p {
+    text-align: center;
+}
+
+li:hover {
+    color: aqua;
+    transition: 1s;
+}
+
+li:active {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    transition: 5s;
+}
+
+ul, ol {
+    list-style: none;
+}
