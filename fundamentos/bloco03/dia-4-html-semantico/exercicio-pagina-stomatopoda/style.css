@@ -21,8 +21,8 @@ h2, h3 {
 
 section {
     border-radius: 1%;
-    height: 310px;
-    width: 900px;
+   /*  height: 310px;
+    width: 900px; */
     border: dashed 1px black;
     margin: 10px;
     padding: 50px;
@@ -80,4 +80,11 @@ aside {
     left: 150px;
     top: 20px;
     position: fixed;
+}
+
+table {
+    color: white;
+    margin: auto;
+    width: 50%;
+    text-align: center;
 }
