@@ -1,52 +1,40 @@
-let salarioBruto = 1560;
-let salarioInss = 0;
-let salarioLiquido =0;
-let aliquota = 0;
-let impostoRenda = 0;
-let parcela = 0;
-let descont = 0;
-if (salarioBruto >= 1556.94) {
-  aliquota = salarioBruto * (8 / 100);
-  salarioInss = salarioBruto - aliquota;
+let salarioBruto = 5190;
+if(salarioBruto <= 1556.94) {
+  salarioBruto *= 0.92;
 }
-else if (salarioBruto <= 2594.92) {
-  aliquota = salarioBruto * (9 / 100);
-  salarioInss = salarioBruto - aliquota;
+else if(salarioBruto <= 2594.92) {
+  salarioBruto *= 0.91;
 }
-else if (salarioBruto <= 5189.82) {
-  aliquota = salarioBruto * (11 / 100);
-  salarioInss = salarioBruto - aliquota;
+else if(salarioBruto <= 5189.82) {
+  salarioBruto = salarioBruto * 0.89;
 }
 else {
-  aliquota = 570.88;
-  salarioInss = salarioBruto - aliquota;
+  salarioBruto -= 570.88;
 }
+console.log("O salario após o desconto do INSS será: " + salarioBruto.toFixed(2) + " reais.")
 
-if(salarioInss >= 1903.99) {
-  impostoRenda = salarioInss * (7.5 / 100);
-  parcela = 142.80;
-  desconto = impostoRenda - parcela;
-  salarioLiquido = salarioInss - desconto;
+let parcelaIR;
+let aliquotaIR;
+let calculoIR;
+if(salarioBruto >= 1903.99) {
+  parcelaIR = 142.80;
+  aliquotaIR = (salarioBruto * 0.075) - parcelaIR;
+  salarioBruto -= aliquotaIR;
 }
-else if(salarioInss >= 2826.65) {
-  impostoRenda = salarioInss * (15 / 100);
-  parcela = 354.80;
-  desconto = impostoRenda - parcela;
-  salarioLiquido = salarioInss - desconto;
+else if(salarioBruto >= 2826.66) {
+  parcelaIR = 354.80;
+  aliquotaIR = (salarioBruto * 0.15) - parcelaIR;
+  salarioBruto -= aliquotaIR;
 }
-else if(salarioInss >= 3751,06) {
-  impostoRenda = salarioInss * (22.5 / 100);
-  parcela = 636,13;
-  desconto = impostoRenda - parcela;
-  salarioLiquido = salarioInss - desconto;
+else if(salarioBruto >= 3751.06 && salarioBruto <= 4664.68) {
+  parcelaIR = 636.13;
+  aliquotaIR = (salarioBruto * 0.225) - parcelaIR;
+  salarioBruto -= aliquotaIR;
 }
 else {
-  impostoRenda = salarioInss * (27.5 / 100);
-  parcela = 869,36;
-  desconto = impostoRenda - parcela;
-  salarioLiquido = salarioInss - desconto;
+  parcelaIR = 869.36;
+  aliquotaIR = (salarioBruto * 0.275) - parcelaIR;
+  salarioBruto -= aliquotaIR;
 }
 
-console.log("O seu salário líquido é: " + salarioLiquido)
-
-
+console.log('O seu salário após os descontos do INSS e Imposto de Renda (salário líquido) será: ' + salarioBruto + ' reais.')
