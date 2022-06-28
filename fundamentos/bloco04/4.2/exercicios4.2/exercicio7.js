@@ -9,4 +9,4 @@ for(let index = 1; index < numbers.length ; index += 1) {
   }
 }
 
-console.log(menorValor)
+console.log('O menor valor contido na array é: ' + menorValor)

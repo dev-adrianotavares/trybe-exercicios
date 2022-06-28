@@ -13,6 +13,6 @@ if(valoresImpares === 0) {
 }
 
 else {
-  console.log(valoresImpares)
+  console.log('Quantidade de valores ímpares: ' + valoresImpares)
 }
 
