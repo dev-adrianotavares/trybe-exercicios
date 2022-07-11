@@ -1,0 +1,33 @@
+/* * {
+  padding: 0;
+  margin: 0;
+  vertical-align: baseline;
+  list-style: none;
+  border: 0;
+} */
+body {
+  background-color: rgb(219, 219, 219);
+}
+#titulo {
+  width: 80%;
+  margin: 40px auto;
+  background-color: rgb(243, 243, 243);
+  border: 1px solid rgb(179, 179, 179);
+  border-radius: 5px;
+}
+#formulario-principal {
+  border: 1px solid black;
+  width: 80%;
+  margin: 40px auto;
+  padding: 5px;
+  font-size: smaller;
+  color: rgb(105, 105, 105);
+}
+
+input {
+  margin-top: 10px;
+}
+
+h1 {
+  text-align: center;
+}
