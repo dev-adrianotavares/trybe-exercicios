@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário</title>
+  <link rel="stylesheet" href="bootstrap-5.2.0-beta1-dist/css/bootstrap-reboot.min.css">
+  <script src="jquery-3.6.0.min.js"></script>
+  <script src="/bootstrap-5.2.0-beta1-dist/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <div id="titulo">
+    <h1>Preencha o formulário abaixo e concorra a uma viagem!</h1>
+  </div>
+  <form id="formulario-principal" action="" method="get">
+    <div class="form-group">
+      <label class="form-label" for="nome">Nome: <input class="form-control" type="text" name="nome" required maxlength="40" minlength="10"></label> <br>
+      <label class="form-label" for="email">Email: <input class="form-control" type="email" name="email" required maxlength="50" minlength="10"></label>
+    </div>
+    <div class="form-group" id="opcoes">
+      <label class="form-label" for="cidade"><input class="form-control" type="radio" id="cidade" name="opcoes" value="HTML"> Cidade</label>
+      <label class="form-label" for="campo"><input class="form-control" type="radio" id="campo" name="opcoes" value="HTML"> Campo</input></label>
+      <label class="form-label" for="praia"><input class="form-control" type="radio" id="praia" name="opcoes" value="HTML"> Praia</label>
+      <label class="form-label" for="montanhas"><input class="form-control" type="radio" id="montanhas" name="opcoes" value="HTML"> Montanhas</label>
+    </div>
+    <div class="form-group">
+      <p>Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso TrybeTrip?</p>
+      <label class="form-label" for="resposta">
+        <textarea class="form-control" name="resposta" id="resposta" cols="30" rows="5" maxlength="500"></textarea>
+      </label><br>
+      <p>Qual a melhor data para realizar sua viagem?</p>
+      <label class="form-label" for="">Data: <input class="form-control" type="date"></label><br>
+    </div>
+    <p>Gostaria de receber outras incríveis oportunidades oferecidas pela Trybe?</p>
+    <input class="form-control" type="checkbox" id="concordo1" name="concordo1"> Concordo <br>
+    <label class="form-label" for="concordo1"></label>
+    <p>Concordo que imagens das minhas férias poderão ser usadas na divulgação de concursos futuros.</p>
+    <input class="form-control" type="checkbox" id="concordo2" name="concordo2"> Concordo
+    <label class="form-label" for="concordo2"></label>
+    <br>
+    <button class="btn btn-success" type="submit">Enviar</button>
+    <button class="btn btn-success" type="reset">Limpar</button>
+  </form>
+  <script src="script.js"></script>
+</body>
+
+</html>
